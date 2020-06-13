@@ -66,39 +66,6 @@ function CreateEntitiesFromTree(tree, parent = -1, isLeft = true)
 }
 
 
-var baseBranchWidth = 0.02;
-
-function CreateMesh(entityId)
-{
-    var entity = GetEntity(entityId);
-    if(entity.m_mesh)
-        return;
-    
-    var baseWidth = baseBranchWidth;
-    var vertices = [];
-    if(entity.m_firstChild != -1)
-    {
-        CreateMesh(entity.m_firstChild);
-        CreateMesh(entity.m_lastChild);        
-        baseWidth = GetEntity(entity.m_firstChild).m_mesh.m_baseWidth + GetEntity(entity.m_lastChild).m_mesh.m_baseWidth;
-        vertices = createBranchVertices(baseWidth);
-    }
-    else
-    {
-        
-    }
-    
-    
-    
-    
-    
-}
-
-var min = 360;
-var max = -360;
-var rotationRange = 60;
-
-
 function AnimateEntities()
 {
     var date = new Date();
