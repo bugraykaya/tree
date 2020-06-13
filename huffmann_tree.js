@@ -78,7 +78,7 @@ function AnimateEntities()
     for(var i = 0 ; i < allEntities.length ; i++)
     {
         var entity = allEntities[i];
-        var localWind = [windVelocity[0], windVelocity[1], windVelocity[2], windVelocity[3]];//scalarMult(windVelocity, /*Math.cos(time * 4 + entity.m_animPhase) * deltaTime **/ 0.01);
+        var localWind = [windVelocity[0], windVelocity[1], windVelocity[2], windVelocity[3]];
         
         var inverseTransform = inverse4(entity.m_transform.m_modelMatrix);
         localWind = mult(inverseTransform, localWind);
