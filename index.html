@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    canvas {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+</style>
+
+<script type="text/javascript" src="Common/world_state.js"></script>
+<script type="text/javascript" src="Common/initShaders.js"></script>
+<script type="text/javascript" src="Common/MV.js"></script>
+<script type="text/javascript" src="entity_system.js"></script>
+<script type="text/javascript" src="huffmann_tree.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+<body>
+    
+    <div id="canvasContainer">
+        <canvas id="gl-canvas" width = 1024 height=768>
+            Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
+        
+    </div>
+    
+    <br/>
+
+    <textarea id="text-field" style="width:360px; height: 240px" ></textarea>
+    <button id= "tButton">Change Text</button>
+
+    
+    <input type="number" id="wind_x" >
+    <input type="number" id="wind_y" >
+    <button id= "change-wind">Change Wind</button>
+    <input type="number" id="stiffness" >
+    <button id= "change-stiffness">Change Stiffness</button>
+
+</body>
+</html>
